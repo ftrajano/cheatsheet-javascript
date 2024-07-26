@@ -15,20 +15,19 @@ Function definition can be made concise using concise arrow notation:<br>
 
 
 ## Iterators
-<ul>
-  <li>
-    forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
-    <br>
-    ![iterator anatomy](https://github.com/user-attachments/assets/4ee02056-0789-4932-8d93-bf3f459c13fa)
-  </li>
+
+ 
+* forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
+<br>
+![iterator anatomy](https://github.com/user-attachments/assets/05de0dae-b4a7-498a-ac33-ecde888c7d43)
   
-  <li>map() executes the same code on every element in an array and returns a new array with the updated elements.</li>
-  <li>filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements![iterator anatomy](https://github.com/user-attachments/assets/024c42b5-a58f-4eff-8993-81035144c876)
- that return truthy for the criteria.</li>
-  <li>findIndex() returns the index of the first element of an array that satisfies a condition in the callback function. It returns -1 if none of the elements in the array satisfies the condition.</li>
-  <li>reduce() iterates through an array and takes the values of the elements and returns a single value.</li>
-</ul>
+map() executes the same code on every element in an array and returns a new array with the updated elements.
+filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements
+that return truthy for the criteria.</li>
+findIndex() returns the index of the first element of an array that satisfies a condition in the callback function. It returns -1 if none of the elements in the array satisfies the condition.
+reduce() iterates through an array and takes the values of the elements and returns a single value.
 All iterator methods take a callback function, which can be a pre-defined function, a function expression, or an arrow function.
+
 
 
 
