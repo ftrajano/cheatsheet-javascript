@@ -15,10 +15,12 @@ Function definition can be made concise using concise arrow notation:<br>
 
 
 ## Iterators
-forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.<br>
+<a href="https://www.codecademy.com/resources/docs/javascript/arrays/map">forEach()</a> is used to execute the same code on every element in an array but does not change the array and returns undefined.<br>
 ![iterator anatomy](https://github.com/user-attachments/assets/05de0dae-b4a7-498a-ac33-ecde888c7d43)
   
 map() executes the same code on every element in an array and returns a new array with the updated elements.<br>
+![Captura de Tela 2024-07-26 às 07 26 27](https://github.com/user-attachments/assets/0c5847eb-3a53-4c52-9c05-5334097898f0)
+<br>
 
 
 filter() checks every element in an array to see if it meets certain criteria and returns a new array with the elements that return truthy for the criteria.<br>
