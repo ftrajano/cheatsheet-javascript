@@ -1,6 +1,11 @@
 # cheatsheet-javascript
 Repository for Javascript Documentation
 
+# Index
+1. Functions
+2. Iterators
+3. Modules
+
 
 ## Functions
 To define a function using function expressions:<br>
@@ -39,8 +44,45 @@ Function definition can be made concise using concise arrow notation:<br>
 All iterator methods take a callback function, which can be a pre-defined function, a function expression, or an arrow function.
 
 
+## Modules
+
+Implementations of Modules in JavaScript: Node.js vs ES6
+
+The Node runtime environment and the module.exports and require() syntax.
+The browser’s runtime environment and the ES6 import/export syntax.
+
+### Implementing Modules in Node
+
+o create a module, you simply have to create a new file where the functions can be declared. Then, to make these functions available to other files, add them as properties to the built-in module.exports object:
+
+```javascript
+/* converters.js */
+function celsiusToFahrenheit(celsius) {
+  return celsius * (9/5) + 32;
+}
+
+module.exports.celsiusToFahrenheit = celsiusToFahrenheit;
+
+module.exports.fahrenheitToCelsius = function(fahrenheit) {
+  return (fahrenheit - 32) * (5/9);
+};
+```
+
+The require() function accepts a string as an argument. That string provides the file path to the module you would like to import.
 
 
+```javascript
+/* water-limits.js */
+const converters = require('./converters.js');
 
+const freezingPointC = 0;
+const boilingPointC = 100;
+
+const freezingPointF = converters.celsiusToFahrenheit(freezingPointC);
+const boilingPointF = converters.celsiusToFahrenheit(boilingPointC);
+
+console.log(`The freezing point of water in Fahrenheit is ${freezingPointF}`);
+console.log(`The boiling point of water in Fahrenheit is ${boilingPointF}`);
+```
 
 
