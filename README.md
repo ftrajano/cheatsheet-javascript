@@ -19,7 +19,7 @@ Function definition can be made concise using concise arrow notation:<br>
   <li>
     forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
     <br>
-    ![Uploading iterator anatomy.svg…]()
+    ![iterator anatomy](https://github.com/user-attachments/assets/4ee02056-0789-4932-8d93-bf3f459c13fa)
   </li>
   
   <li>map() executes the same code on every element in an array and returns a new array with the updated elements.</li>
@@ -29,6 +29,7 @@ Function definition can be made concise using concise arrow notation:<br>
   <li>reduce() iterates through an array and takes the values of the elements and returns a single value.</li>
 </ul>
 All iterator methods take a callback function, which can be a pre-defined function, a function expression, or an arrow function.
+
 
 
 
