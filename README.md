@@ -118,4 +118,38 @@ const changeToFunkyColor = (domElement) => {
 
 export { toggleHiddenElement, changeToFunkyColor };
 ```
+In addition to the syntax above, in which all named exports are listed together, individual values may be exported as named exports by simply placing the export keyword in front of the variable’s declaration. Here is the same example using this syntax:
 
+```javascript
+/* dom-functions.js */
+export const toggleHiddenElement = (domElement) => {
+  // logic omitted...
+}
+
+export const changeToFunkyColor = (domElement) => {
+  // logic omitted...
+}
+```
+
+ES6 Import Syntax
+
+The ES6 syntax for importing named resources from modules is similar to the export syntax:
+
+```javascript
+import { exportedResourceA, exportedResourceB } from '/path/to/module.js';
+```
+
+Let’s update the secret-messages program such that it now imports functionality from dom-functions.js. Doing so requires two important steps. First, update secret-messages.js:
+
+```javascript
+/* secret-messages.js */
+import { toggleHiddenElement, changeToFunkyColor } from '../modules/dom-functions.js';
+
+const buttonElement = document.getElementById('secret-button');
+const pElement = document.getElementById('secret-p');
+
+buttonElement.addEventListener('click', () => {
+  toggleHiddenElement(pElement);
+  changeToFunkyColor(buttonElement);
+});
+```
