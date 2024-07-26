@@ -15,10 +15,7 @@ Function definition can be made concise using concise arrow notation:<br>
 
 
 ## Iterators
-
- 
-* forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.
-<br>
+forEach() is used to execute the same code on every element in an array but does not change the array and returns undefined.<br>
 ![iterator anatomy](https://github.com/user-attachments/assets/05de0dae-b4a7-498a-ac33-ecde888c7d43)
   
 map() executes the same code on every element in an array and returns a new array with the updated elements.
