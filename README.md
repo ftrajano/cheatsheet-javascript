@@ -5,6 +5,8 @@ Repository for Javascript Documentation
 1. Functions
 2. Iterators
 3. Modules
+   a. Node
+   b. ES6 Named Export Syntax
 
 
 ## Functions
@@ -85,4 +87,35 @@ console.log(`The freezing point of water in Fahrenheit is ${freezingPointF}`);
 console.log(`The boiling point of water in Fahrenheit is ${boilingPointF}`);
 ```
 
+
+### ES6 Named Export Syntax
+
+the functions you wish to reuse can be exported using the named export syntax below:
+
+```javascript
+export { resourceToExportA, resourceToExportB, ...}
+```
+
+Using this syntax, the name of each exported resource is listed between curly braces and separated by commas. Below, you can see how this is implemented in the new module file dom-functions.js:
+
+```javascript
+/* dom-functions.js */
+const toggleHiddenElement = (domElement) => {
+    if (domElement.style.display === 'none') {
+      domElement.style.display = 'block';
+    } else {
+      domElement.style.display = 'none';
+    }
+}
+
+const changeToFunkyColor = (domElement) => {
+  const r = Math.random() * 255;
+  const g = Math.random() * 255;
+  const b = Math.random() * 255;
+        
+  domElement.style.background = `rgb(${r}, ${g}, ${b})`;
+}
+
+export { toggleHiddenElement, changeToFunkyColor };
+```
 
